@@ -132,6 +132,11 @@ hr {
 	height:100%;
 }
 
+.resume-pdf-embed {
+    height: 1080px;
+    width: 100%;
+}
+
 footer {
     background: #fff;
     background: rgba(255,255,255,0.9);
@@ -240,3 +245,72 @@ footer p {
       max-width: 50vw;
     }
   }
+
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+    .box {
+        padding: 20px 10px;
+        margin-bottom: 15px;
+    }
+
+    .img-partial {
+        max-width: 100%;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .intro-text {
+        font-size: 1.1em;
+    }
+
+    footer p {
+        padding: 25px 0;
+    }
+
+    .resume-pdf-embed {
+        height: 500px;
+    }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .brand {
+        display: inherit;
+        margin: 0;
+        padding: 20px 0 5px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 3.5em;
+        font-weight: 700;
+        line-height: normal;
+        color: #fff;
+    }
+
+    .address-bar {
+        display: inherit;
+        margin: 0;
+        padding: 0 0 20px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+
+    .img-partial {
+        max-width: 85%;
+    }
+
+    .resume-pdf-embed {
+        height: 800px;
+    }
+}
