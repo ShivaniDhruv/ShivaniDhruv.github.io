@@ -136,8 +136,8 @@ hr {
 }
 
 .resume-pdf-embed {
-    height: 1080px;
     width: 100%;
+    aspect-ratio: 8.5 / 11;
 }
 
 footer {
@@ -276,9 +276,6 @@ footer p {
         padding: 25px 0;
     }
 
-    .resume-pdf-embed {
-        height: 500px;
-    }
 }
 
 /* Tablet styles */
@@ -313,7 +310,4 @@ footer p {
         max-width: 85%;
     }
 
-    .resume-pdf-embed {
-        height: 800px;
-    }
 }
