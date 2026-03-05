@@ -93,6 +93,7 @@ hr {
     padding: 30px 15px;
     background: #fff;
     background: rgba(255,255,255,0.9);
+    overflow: hidden;
 }
 
 .intro-text {
@@ -251,7 +252,8 @@ footer p {
     .box {
         padding: 20px 10px;
         margin-bottom: 15px;
-        background: rgba(255,255,255,0.95);
+        background: rgba(255,255,255,0.75);
+        overflow: hidden;
     }
 
     .img-partial {
