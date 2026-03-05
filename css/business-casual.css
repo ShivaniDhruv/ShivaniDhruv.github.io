@@ -46,6 +46,12 @@ hr {
     display: none;
 }
 
+.navbar-default {
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+    border: none;
+}
+
 .navbar-brand {
     text-transform: uppercase;
     font-weight: 900;
@@ -64,6 +70,8 @@ hr {
 
 .img-partial {
     max-width: 75%;
+    display: block;
+    margin: 0 auto;
 }
 
 .brand-before,
