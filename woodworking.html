@@ -91,37 +91,133 @@
                     </h2>
                     <hr>
                 </div>
-                <div class="col-xs-12 col-lg-12 text-center">
-                    <img class="img-responsive img-border img-partial" src="img/woodworking/art4.jpg" alt=""/>
-                    <hr>
+                <style>
+                    .gallery {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        justify-content: center;
+                        padding: 0 10px;
+                    }
+                    .gallery-item {
+                        width: calc(25% - 10px);
+                        aspect-ratio: 1;
+                        overflow: hidden;
+                        border: 1px solid #999;
+                        cursor: pointer;
+                        transition: opacity 0.2s;
+                    }
+                    .gallery-item:hover {
+                        opacity: 0.8;
+                    }
+                    .gallery-item img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    .rotate-cw-90 {
+                        transform: rotate(90deg);
+                        /* scale up to fill the square after rotation */
+                        transform-origin: center center;
+                    }
+                    .rotate-180 {
+                        transform: rotate(180deg);
+                    }
+                    .lightbox-overlay {
+                        display: none;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0,0,0,0.85);
+                        z-index: 9999;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                    }
+                    .lightbox-overlay.active {
+                        display: flex;
+                    }
+                    .lightbox-overlay img {
+                        max-width: 90%;
+                        max-height: 90%;
+                        box-shadow: 0 0 30px rgba(0,0,0,0.5);
+                    }
+                    .lightbox-close {
+                        position: fixed;
+                        top: 20px;
+                        right: 30px;
+                        color: #fff;
+                        font-size: 40px;
+                        cursor: pointer;
+                        z-index: 10000;
+                        line-height: 1;
+                    }
+                    @media screen and (max-width: 767px) {
+                        .gallery-item {
+                            width: calc(50% - 10px);
+                        }
+                    }
+                    @media screen and (min-width: 768px) and (max-width: 991px) {
+                        .gallery-item {
+                            width: calc(33.333% - 10px);
+                        }
+                    }
+                </style>
+
+                <div class="gallery">
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="img/woodworking/art4.jpg" alt=""/>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="img/woodworking/img0_0.JPG" alt=""/>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img class="rotate-cw-90" src="img/woodworking/img0.jpg" alt=""/>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img class="rotate-cw-90" src="img/woodworking/img0_1.jpg" alt=""/>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="img/woodworking/img1.JPG" alt=""/>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="img/woodworking/img2.JPG" alt=""/>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="img/woodworking/img3.JPG" alt=""/>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="img/woodworking/img4.JPG" alt=""/>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img class="rotate-cw-90" src="img/woodworking/img5.jpg" alt=""/>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img class="rotate-cw-90" src="img/woodworking/img6.jpg" alt=""/>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="img/woodworking/img7.jpg" alt=""/>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="img/woodworking/img8.JPG" alt=""/>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="img/woodworking/img9.jpg" alt=""/>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="img/woodworking/img10.jpg" alt=""/>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="img/woodworking/img11.JPG" alt=""/>
+                    </div>
                 </div>
-                <div class="col-xs-12 col-lg-12 text-center">
-                    <img class="img-responsive img-border img-partial" src="img/woodworking/img1.JPG" alt=""/>
-                    <hr>
-                </div>
-                <div class="col-xs-12 col-lg-12 text-center">
-                    <img class="img-responsive img-border img-partial" src="img/woodworking/img2.JPG" alt=""/>
-                    <hr>
-                </div>
-                <div class="col-xs-12 col-lg-12 text-center">
-                    <img class="img-responsive img-border img-partial" src="img/woodworking/img3.JPG" alt=""/>
-                    <hr>
-                </div>
-                <div class="col-xs-12 col-lg-12 text-center">
-                    <img class="img-responsive img-border img-partial" src="img/woodworking/img4.JPG" alt=""/>
-                    <hr>
-                </div>
-                <div class="col-xs-12 col-lg-12 text-center">
-                    <img class="img-responsive img-border img-partial" src="img/woodworking/img8.JPG" alt=""/>
-                    <hr>
-                </div>
-                <div class="col-xs-12 col-lg-12 text-center">
-                    <img class="img-responsive img-border img-partial" src="img/woodworking/img9.jpg" alt=""/>
-                    <hr>
-                </div>
-                <div class="col-xs-12 col-lg-12 text-center">
-                    <img class="img-responsive img-border img-partial" src="img/woodworking/img11.JPG" alt=""/>
-                    <hr>
+
+                <!-- Lightbox -->
+                <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+                    <span class="lightbox-close">&times;</span>
+                    <img id="lightbox-img" src="" alt=""/>
                 </div>
             </div>
         </div>
@@ -144,6 +240,24 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Lightbox Script -->
+    <script>
+        function openLightbox(item) {
+            var img = item.querySelector('img');
+            var lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src;
+            // Carry over rotation class
+            lightboxImg.className = img.className || '';
+            document.getElementById('lightbox').classList.add('active');
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
 
 </body>
 
